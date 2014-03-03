@@ -54,7 +54,7 @@
 </head>
 <body>
 	<div id="header">
-		<h1>top fixed header</h1>
+		<h1>Top fixed header</h1>
 	</div>
 
 	<div id="wrapper">
@@ -107,6 +107,7 @@
 			</div>
 
 			<div id="content">
+				<h3><input type="checkbox" id="toggleHeader" checked="checked">Toggle header</h3>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, praesentium, autem ex fuga cumque consectetur ducimus ullam fugiat accusamus necessitatibus maiores commodi nulla. Quibusdam, ipsam excepturi architecto rerum repudiandae porro quos facilis itaque obcaecati tempora. Voluptatem, officia, saepe, ipsam cumque impedit culpa possimus illum in vitae quod ut doloribus sunt veritatis rerum officiis ea nihil eveniet harum dolores aut reprehenderit aperiam quas nulla facilis quisquam perspiciatis consectetur pariatur enim unde ipsum sapiente repudiandae earum explicabo soluta tenetur ducimus animi. Impedit, odio, eius incidunt itaque consequatur vel soluta architecto modi corporis dolor expedita assumenda provident perferendis officiis eligendi at distinctio illum!</p>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, soluta eligendi ipsa commodi excepturi porro impedit aliquid. Magni, quod, voluptates repudiandae dolor cum fuga numquam aliquid nulla! Suscipit, beatae, veritatis rerum eius ex quis aperiam molestias architecto omnis cumque veniam velit ad reiciendis accusamus distinctio. Soluta, consectetur dolore veniam numquam provident alias ad nemo doloremque. Nostrum, aperiam, in quibusdam sunt corporis assumenda iste repellat eos quidem quisquam a reprehenderit praesentium ratione provident porro ex ab. Incidunt similique delectus perferendis. Libero, voluptatibus, magni delectus ipsa nam voluptatum eum asperiores itaque omnis iste quas facere similique. Minus, nesciunt suscipit placeat. Incidunt, expedita.</p>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, a, consequuntur ea eligendi nemo vel veniam quod cum veritatis corporis dolor impedit reprehenderit voluptates mollitia ducimus provident tempora assumenda ab laudantium itaque voluptatum. In, nobis consequatur officiis iure ducimus repudiandae quis voluptatibus inventore! Facilis vel nam sapiente quo ipsum. Corporis, voluptates, illo, beatae, in assumenda obcaecati quia delectus ullam quos necessitatibus ab excepturi quis consequatur itaque illum odit dolorum neque numquam quo dolores doloremque dolore reiciendis cupiditate et molestias possimus veniam totam eum tempore sint vel eveniet tenetur nesciunt? Voluptates est quisquam et quis earum autem modi labore ipsam vero.</p>
@@ -122,6 +123,18 @@
 	<script src="jquery.persistentNavigation-0.1.0.js"></script>
 	<script>
 		$('#menu').persistentNavigation();
+
+		$('#toggleHeader').change(function() {
+			if ($(this).prop('checked')) {
+				$('#header').show();
+				$('#container').css('top', 200);
+			}
+			else {
+				$('#header').hide();
+				$('#container').css('top', 0);
+			}
+			$('#menu').persistentNavigation('destroy').persistentNavigation();
+		});
 	</script>
 </body>
 </html>
