@@ -7,7 +7,7 @@
 	$.fn.persistentNavigation = function() {
 		this.each(function() {
 			var $window = $(window),
-				$menu = $('#menu'),
+				$menu = $(this),
 				topOffset = $menu.offset().top;
 
 			// wrap in fixed div, offset to starting position
