@@ -8,3 +8,5 @@ It's best used on a page with a large set of quick links, next to a long area of
 	$('#menu').persistentNavigation();
 
 The plugin wraps the selected element in a fixed-position div, maintaining its original position. When the window is scrolled, natural scrolling is emulated on the menu by shifting its absolute position. Once the menu reaches its bottom or its top, it remains fixed until the scroll direction changes.
+
+See demo.html for a simple use case.
