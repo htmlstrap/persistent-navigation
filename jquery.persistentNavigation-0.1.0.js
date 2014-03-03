@@ -1,7 +1,7 @@
 /*! jQuery Persistent Navigation 0.1.0
  *  Copyright (c) 2014 Jody Zeitler
  *  Licensed under the MIT license.
- *	http://en.wikipedia.org/wiki/MIT_License
+ *  http://en.wikipedia.org/wiki/MIT_License
  */
 (function($) {
 	$.fn.persistentNavigation = function() {
