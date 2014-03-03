@@ -7,9 +7,6 @@
 	$.fn.persistentNavigation = function(method) {
 		return this.each(function() {
 			switch (method) {
-				case 'update':
-					update($(this));
-					break;
 				case 'destroy':
 					destroy($(this));
 					break;
@@ -22,18 +19,21 @@
 	function init(element) {
 		var $window = $(window),
 			$menu = element,
+			$container = element.parent(),
+			topOffset = $menu.offset().top,
 			settings = {
-				navId: 'nav_' + Math.floor( Math.random() * (new Date()).getTime() ),
-				topOffset: $menu.offset().top,
-				scrollHeight: $window.height() - $menu.offset().top
+				navId: 'nav_' + Math.floor( Math.random() * (new Date()).getTime() )
 			}
 
 		// wrap in fixed div, offset to starting position
-		var $wrapper = $('<div id="' + settings.navId + '"></div>').css({'position': 'fixed', 'top': settings.topOffset});
-		$menu.wrap($wrapper).css({'position': 'absolute', 'top': 0}).data('persistentNavigation', settings);
+		var $wrapper = $('<div id="' + settings.navId + '"></div>').css({'position': 'fixed'});
+		$menu.wrap($wrapper).css({'position': 'absolute', 'top': 0});
 
-		var lastScroll = 0;
+		// store settings
+		$menu.data('persistentNavigation', settings);
+
 		// emulate natural scrolling until menu is fully revealed, then stop
+		var lastScroll = 0;
 		$window.on('scroll.' + settings.navId, function() {
 			if ($window.scrollTop() < lastScroll) { // going up
 				if ( $menu.position().top < 0 ) {
@@ -41,19 +41,23 @@
 				}
 			}
 			else { // going down
-				if ( $menu.height() + $menu.position().top > settings.scrollHeight ) { // scroll
-					$menu.css('top', Math.max( $menu.position().top + lastScroll - $window.scrollTop(), settings.scrollHeight - $menu.height() ) );
+				var scrollHeight = $window.height() - topOffset;
+				if ( $menu.height() + $menu.position().top > scrollHeight ) { // scroll
+					var newTop = Math.max( $menu.position().top + lastScroll - $window.scrollTop(), scrollHeight - $menu.height() );
+					if (newTop + $menu.height() > $container.height() - $window.scrollTop()) {
+						newTop = $container.height() - $window.scrollTop() - $menu.height();
+					}
+					$menu.css('top', newTop);
+				}
+				else if ($window.scrollTop() + $window.height() > $container.offset().top + $container.height()) { // stop at container edge
+					var newTop = Math.min( $menu.position().top + lastScroll - $window.scrollTop(), $container.height() - $window.scrollTop() - $menu.height() );
+					if (newTop + $menu.height() >= $container.height() - $window.scrollTop()) {
+						$menu.css('top', newTop);
+					}	
 				}
 			}
 			lastScroll = $window.scrollTop();
 		}).trigger('scroll');
-
-		$window.on('resize.' + settings.navId, function() { update(element) });
-	}
-
-	function update(element) {
-		var settings = element.data('persistentNavigation');
-		settings.scrollHeight = $(window).height() - settings.topOffset;
 	}
 
 	function destroy(element) {

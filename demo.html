@@ -9,6 +9,7 @@
 	}
 
 	html,body {
+		position: relative;
 		margin: 0;
 		padding: 0;
 		background-color: #f8f8f8;
@@ -23,20 +24,24 @@
 		background-color: #cccccc;
 	}
 
+	/* underneath header, offsets wrapper */
+	#spacer {
+		height: 200px;
+	}
+
 	/* scrollable area */
 	#wrapper {
-		position: absolute;
 		width: 100%;
 	}
 
 		/* centered content */
 		#container {
 			position: relative;
-			top: 200px;
 			width: 100%;
 			max-width: 960px;
 			margin: 0 auto;
 			background-color: #f2f2f2;
+			overflow: hidden;
 		}
 
 			#menu {
@@ -50,12 +55,20 @@
 				background-color: #ffffff;
 				padding: 20px;
 			}
+
+	#footer {
+		width: 100%;
+		height: 100px;
+		background-color: #aaaaaa;
+	}
 	</style>
 </head>
 <body>
 	<div id="header">
-		<h1>Top fixed header</h1>
+		<strong>Top fixed header</strong>
 	</div>
+
+	<div id="spacer"></div>
 
 	<div id="wrapper">
 
@@ -107,7 +120,10 @@
 			</div>
 
 			<div id="content">
-				<h3><input type="checkbox" id="toggleHeader" checked="checked">Toggle header</h3>
+				<label>
+					<input type="checkbox" id="toggleHeader" checked="checked">
+					<strong>Toggle header</strong>
+				</label>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, praesentium, autem ex fuga cumque consectetur ducimus ullam fugiat accusamus necessitatibus maiores commodi nulla. Quibusdam, ipsam excepturi architecto rerum repudiandae porro quos facilis itaque obcaecati tempora. Voluptatem, officia, saepe, ipsam cumque impedit culpa possimus illum in vitae quod ut doloribus sunt veritatis rerum officiis ea nihil eveniet harum dolores aut reprehenderit aperiam quas nulla facilis quisquam perspiciatis consectetur pariatur enim unde ipsum sapiente repudiandae earum explicabo soluta tenetur ducimus animi. Impedit, odio, eius incidunt itaque consequatur vel soluta architecto modi corporis dolor expedita assumenda provident perferendis officiis eligendi at distinctio illum!</p>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, soluta eligendi ipsa commodi excepturi porro impedit aliquid. Magni, quod, voluptates repudiandae dolor cum fuga numquam aliquid nulla! Suscipit, beatae, veritatis rerum eius ex quis aperiam molestias architecto omnis cumque veniam velit ad reiciendis accusamus distinctio. Soluta, consectetur dolore veniam numquam provident alias ad nemo doloremque. Nostrum, aperiam, in quibusdam sunt corporis assumenda iste repellat eos quidem quisquam a reprehenderit praesentium ratione provident porro ex ab. Incidunt similique delectus perferendis. Libero, voluptatibus, magni delectus ipsa nam voluptatum eum asperiores itaque omnis iste quas facere similique. Minus, nesciunt suscipit placeat. Incidunt, expedita.</p>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, a, consequuntur ea eligendi nemo vel veniam quod cum veritatis corporis dolor impedit reprehenderit voluptates mollitia ducimus provident tempora assumenda ab laudantium itaque voluptatum. In, nobis consequatur officiis iure ducimus repudiandae quis voluptatibus inventore! Facilis vel nam sapiente quo ipsum. Corporis, voluptates, illo, beatae, in assumenda obcaecati quia delectus ullam quos necessitatibus ab excepturi quis consequatur itaque illum odit dolorum neque numquam quo dolores doloremque dolore reiciendis cupiditate et molestias possimus veniam totam eum tempore sint vel eveniet tenetur nesciunt? Voluptates est quisquam et quis earum autem modi labore ipsam vero.</p>
@@ -115,8 +131,18 @@
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, a, consequuntur ea eligendi nemo vel veniam quod cum veritatis corporis dolor impedit reprehenderit voluptates mollitia ducimus provident tempora assumenda ab laudantium itaque voluptatum. In, nobis consequatur officiis iure ducimus repudiandae quis voluptatibus inventore! Facilis vel nam sapiente quo ipsum. Corporis, voluptates, illo, beatae, in assumenda obcaecati quia delectus ullam quos necessitatibus ab excepturi quis consequatur itaque illum odit dolorum neque numquam quo dolores doloremque dolore reiciendis cupiditate et molestias possimus veniam totam eum tempore sint vel eveniet tenetur nesciunt? Voluptates est quisquam et quis earum autem modi labore ipsam vero.</p>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, a, consequuntur ea eligendi nemo vel veniam quod cum veritatis corporis dolor impedit reprehenderit voluptates mollitia ducimus provident tempora assumenda ab laudantium itaque voluptatum. In, nobis consequatur officiis iure ducimus repudiandae quis voluptatibus inventore! Facilis vel nam sapiente quo ipsum. Corporis, voluptates, illo, beatae, in assumenda obcaecati quia delectus ullam quos necessitatibus ab excepturi quis consequatur itaque illum odit dolorum neque numquam quo dolores doloremque dolore reiciendis cupiditate et molestias possimus veniam totam eum tempore sint vel eveniet tenetur nesciunt? Voluptates est quisquam et quis earum autem modi labore ipsam vero.</p>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, a, consequuntur ea eligendi nemo vel veniam quod cum veritatis corporis dolor impedit reprehenderit voluptates mollitia ducimus provident tempora assumenda ab laudantium itaque voluptatum. In, nobis consequatur officiis iure ducimus repudiandae quis voluptatibus inventore! Facilis vel nam sapiente quo ipsum. Corporis, voluptates, illo, beatae, in assumenda obcaecati quia delectus ullam quos necessitatibus ab excepturi quis consequatur itaque illum odit dolorum neque numquam quo dolores doloremque dolore reiciendis cupiditate et molestias possimus veniam totam eum tempore sint vel eveniet tenetur nesciunt? Voluptates est quisquam et quis earum autem modi labore ipsam vero.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, corrupti, veniam officia dolores voluptas numquam aliquid recusandae hic nemo tenetur odit aliquam voluptate sequi rerum ipsum aperiam facere error sed quo repudiandae perspiciatis dolorum impedit sunt accusantium voluptatibus magnam at a sapiente aspernatur doloribus nulla ipsam expedita vitae assumenda id eius quae. Quod tempore id velit rerum ab error tempora iusto praesentium maxime exercitationem. Dolor, voluptatibus animi deleniti iusto omnis explicabo placeat voluptate et ex perferendis. Veniam, porro enim voluptate eveniet provident blanditiis sunt molestias eaque adipisci amet! Id quia at tempore corrupti sunt eius dolore aperiam illo perspiciatis cumque.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, dolore, vero, odit suscipit sed fuga adipisci maxime libero vitae unde corrupti molestiae architecto non repellat ducimus labore asperiores rerum? Sint, magni, officiis esse quia assumenda aut illo itaque beatae suscipit quibusdam! Quaerat, officiis, totam, necessitatibus, quae temporibus fugit maiores eligendi nulla dignissimos quas iusto nostrum at praesentium suscipit reprehenderit. Neque, reiciendis, aliquam nisi alias ab qui ullam cupiditate minus mollitia fuga debitis quae rerum iste quam quisquam assumenda aperiam consequatur quaerat excepturi unde et nobis modi atque molestiae temporibus nemo sed dolore voluptas dolor possimus voluptatum error ut quia dignissimos non commodi quidem! Hic, quaerat, tempora, quas, aperiam maiores eos rerum dicta totam pariatur explicabo laboriosam repudiandae nesciunt tempore beatae cumque veritatis inventore qui aliquid corporis dolores minima distinctio quae numquam labore recusandae eius saepe error quasi deserunt aspernatur adipisci dolorum quos mollitia! Aliquid excepturi voluptate rem iusto at recusandae.</p>
+				<label>
+					<input type="checkbox" id="toggleFooter" checked="checked">
+					<strong>Toggle footer</strong>
+				</label>
 			</div>
 		</div>
+	</div>
+
+	<div id="footer">
+		<strong>Absolute footer</strong>
 	</div>
 
 	<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
@@ -126,14 +152,35 @@
 
 		$('#toggleHeader').change(function() {
 			if ($(this).prop('checked')) {
-				$('#header').show();
-				$('#container').css('top', 200);
+				$.when(
+						$('#header').slideDown(),
+						$('#spacer').slideDown()
+					).then(function() {
+						$('#menu').persistentNavigation('destroy').persistentNavigation();
+					});
 			}
 			else {
-				$('#header').hide();
-				$('#container').css('top', 0);
+				$.when(
+						$('#header').slideUp(),
+						$('#spacer').slideUp()
+					).then(function() {
+						$('#menu').persistentNavigation('destroy').persistentNavigation();
+					});
 			}
-			$('#menu').persistentNavigation('destroy').persistentNavigation();
+		});
+
+		$('#toggleFooter').change(function() {
+			if ($(this).prop('checked')) {
+				$('#footer').slideDown(function() {
+					$('#menu').persistentNavigation('destroy').persistentNavigation();
+				});
+				$('html,body').animate({'scrollTop': $(document).height()});
+			}
+			else {
+				$('#footer').slideUp(function() {
+					$('#menu').persistentNavigation('destroy').persistentNavigation();
+				});
+			}
 		});
 	</script>
 </body>
