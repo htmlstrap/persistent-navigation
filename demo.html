@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Persistent Navigation</title>
+	<style>
+	*, *:before, *:after {
+		-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+	}
+
+	html,body {
+		margin: 0;
+		padding: 0;
+		background-color: #f8f8f8;
+	}
+
+	/* fixed overlaid */
+	#header {
+		position: fixed;
+		z-index: 100;
+		width: 100%;
+		height: 200px;
+		background-color: #cccccc;
+	}
+
+	/* scrollable area */
+	#wrapper {
+		position: absolute;
+		width: 100%;
+	}
+
+		/* centered content */
+		#container {
+			position: relative;
+			top: 200px;
+			width: 100%;
+			max-width: 960px;
+			margin: 0 auto;
+			background-color: #f2f2f2;
+		}
+
+			#menu {
+				position: absolute;
+				width: 200px;
+				background-color: #f0f0f0;
+			}
+
+			#content {
+				margin-left: 200px;
+				background-color: #ffffff;
+				padding: 20px;
+			}
+	</style>
+</head>
+<body>
+	<div id="header">
+		<h1>top fixed header</h1>
+	</div>
+
+	<div id="wrapper">
+
+		<div id="container">
+
+			<div id="menu">
+				<ul>
+					<li>side menu 1</li>
+					<li>side menu 2</li>
+					<li>side menu 3</li>
+					<li>side menu 4</li>
+					<li>side menu 5</li>
+					<li>side menu 6</li>
+					<li>side menu 7</li>
+					<li>side menu 8</li>
+					<li>side menu 9</li>
+					<li>side menu 10</li>
+					<li>side menu 11</li>
+					<li>side menu 12</li>
+					<li>side menu 13</li>
+					<li>side menu 14</li>
+					<li>side menu 15</li>
+					<li>side menu 16</li>
+					<li>side menu 17</li>
+					<li>side menu 18</li>
+					<li>side menu 19</li>
+					<li>side menu 20</li>
+					<li>side menu 21</li>
+					<li>side menu 22</li>
+					<li>side menu 23</li>
+					<li>side menu 24</li>
+					<li>side menu 25</li>
+					<li>side menu 26</li>
+					<li>side menu 27</li>
+					<li>side menu 28</li>
+					<li>side menu 29</li>
+					<li>side menu 30</li>
+					<li>side menu 31</li>
+					<li>side menu 32</li>
+					<li>side menu 33</li>
+					<li>side menu 34</li>
+					<li>side menu 35</li>
+					<li>side menu 36</li>
+					<li>side menu 37</li>
+					<li>side menu 38</li>
+					<li>side menu 39</li>
+					<li>side menu 40</li>
+				</ul>
+			</div>
+
+			<div id="content">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, praesentium, autem ex fuga cumque consectetur ducimus ullam fugiat accusamus necessitatibus maiores commodi nulla. Quibusdam, ipsam excepturi architecto rerum repudiandae porro quos facilis itaque obcaecati tempora. Voluptatem, officia, saepe, ipsam cumque impedit culpa possimus illum in vitae quod ut doloribus sunt veritatis rerum officiis ea nihil eveniet harum dolores aut reprehenderit aperiam quas nulla facilis quisquam perspiciatis consectetur pariatur enim unde ipsum sapiente repudiandae earum explicabo soluta tenetur ducimus animi. Impedit, odio, eius incidunt itaque consequatur vel soluta architecto modi corporis dolor expedita assumenda provident perferendis officiis eligendi at distinctio illum!</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, soluta eligendi ipsa commodi excepturi porro impedit aliquid. Magni, quod, voluptates repudiandae dolor cum fuga numquam aliquid nulla! Suscipit, beatae, veritatis rerum eius ex quis aperiam molestias architecto omnis cumque veniam velit ad reiciendis accusamus distinctio. Soluta, consectetur dolore veniam numquam provident alias ad nemo doloremque. Nostrum, aperiam, in quibusdam sunt corporis assumenda iste repellat eos quidem quisquam a reprehenderit praesentium ratione provident porro ex ab. Incidunt similique delectus perferendis. Libero, voluptatibus, magni delectus ipsa nam voluptatum eum asperiores itaque omnis iste quas facere similique. Minus, nesciunt suscipit placeat. Incidunt, expedita.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, a, consequuntur ea eligendi nemo vel veniam quod cum veritatis corporis dolor impedit reprehenderit voluptates mollitia ducimus provident tempora assumenda ab laudantium itaque voluptatum. In, nobis consequatur officiis iure ducimus repudiandae quis voluptatibus inventore! Facilis vel nam sapiente quo ipsum. Corporis, voluptates, illo, beatae, in assumenda obcaecati quia delectus ullam quos necessitatibus ab excepturi quis consequatur itaque illum odit dolorum neque numquam quo dolores doloremque dolore reiciendis cupiditate et molestias possimus veniam totam eum tempore sint vel eveniet tenetur nesciunt? Voluptates est quisquam et quis earum autem modi labore ipsam vero.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, a, consequuntur ea eligendi nemo vel veniam quod cum veritatis corporis dolor impedit reprehenderit voluptates mollitia ducimus provident tempora assumenda ab laudantium itaque voluptatum. In, nobis consequatur officiis iure ducimus repudiandae quis voluptatibus inventore! Facilis vel nam sapiente quo ipsum. Corporis, voluptates, illo, beatae, in assumenda obcaecati quia delectus ullam quos necessitatibus ab excepturi quis consequatur itaque illum odit dolorum neque numquam quo dolores doloremque dolore reiciendis cupiditate et molestias possimus veniam totam eum tempore sint vel eveniet tenetur nesciunt? Voluptates est quisquam et quis earum autem modi labore ipsam vero.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, a, consequuntur ea eligendi nemo vel veniam quod cum veritatis corporis dolor impedit reprehenderit voluptates mollitia ducimus provident tempora assumenda ab laudantium itaque voluptatum. In, nobis consequatur officiis iure ducimus repudiandae quis voluptatibus inventore! Facilis vel nam sapiente quo ipsum. Corporis, voluptates, illo, beatae, in assumenda obcaecati quia delectus ullam quos necessitatibus ab excepturi quis consequatur itaque illum odit dolorum neque numquam quo dolores doloremque dolore reiciendis cupiditate et molestias possimus veniam totam eum tempore sint vel eveniet tenetur nesciunt? Voluptates est quisquam et quis earum autem modi labore ipsam vero.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, a, consequuntur ea eligendi nemo vel veniam quod cum veritatis corporis dolor impedit reprehenderit voluptates mollitia ducimus provident tempora assumenda ab laudantium itaque voluptatum. In, nobis consequatur officiis iure ducimus repudiandae quis voluptatibus inventore! Facilis vel nam sapiente quo ipsum. Corporis, voluptates, illo, beatae, in assumenda obcaecati quia delectus ullam quos necessitatibus ab excepturi quis consequatur itaque illum odit dolorum neque numquam quo dolores doloremque dolore reiciendis cupiditate et molestias possimus veniam totam eum tempore sint vel eveniet tenetur nesciunt? Voluptates est quisquam et quis earum autem modi labore ipsam vero.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, a, consequuntur ea eligendi nemo vel veniam quod cum veritatis corporis dolor impedit reprehenderit voluptates mollitia ducimus provident tempora assumenda ab laudantium itaque voluptatum. In, nobis consequatur officiis iure ducimus repudiandae quis voluptatibus inventore! Facilis vel nam sapiente quo ipsum. Corporis, voluptates, illo, beatae, in assumenda obcaecati quia delectus ullam quos necessitatibus ab excepturi quis consequatur itaque illum odit dolorum neque numquam quo dolores doloremque dolore reiciendis cupiditate et molestias possimus veniam totam eum tempore sint vel eveniet tenetur nesciunt? Voluptates est quisquam et quis earum autem modi labore ipsam vero.</p>
+			</div>
+		</div>
+	</div>
+
+	<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="jquery.persistentNavigation-0.1.0.js"></script>
+	<script>
+		$('#menu').persistentNavigation();
+	</script>
+</body>
+</html>
